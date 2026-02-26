@@ -205,6 +205,8 @@
                 <p>Join our waitlist and be among the first to regain control of your screen time.</p>
                 
                 <form id="waitlist-form" class="waitlist-form">
+                    <div id="error-message" class="error-message hidden"></div>
+                    
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
@@ -227,7 +229,7 @@
                     <p class="form-note">📧 We'll notify you when NoticeMe launches. No spam, ever.</p>
                 </form>
                 
-                <div id="success-message" class="success-message" style="display: none;">
+                <div id="success-message" class="success-message hidden">
                     <h3>✨ Welcome to the waitlist!</h3>
                     <p>Check your email for updates. You're in great company.</p>
                 </div>
@@ -285,6 +287,10 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const schoolYear = document.getElementById('school-year').value;
+            const errorDiv = document.getElementById('error-message');
+            
+            // Hide error message on new submission
+            errorDiv.classList.add('hidden');
             
             try {
                 const response = await fetch('/api/waitlist', {
@@ -300,23 +306,42 @@
                     })
                 });
 
+                const data = await response.json();
+
                 if (!response.ok) {
-                    throw new Error('Failed to join waitlist');
+                    // Show error message
+                    const errorMessage = data.error || 'Something went wrong. Please try again.';
+                    
+                    // Format error messages for user
+                    let displayError = errorMessage;
+                    if (errorMessage.includes('Email already registered')) {
+                        displayError = '📧 This email is already on our waitlist. You\'re all set!';
+                    } else if (errorMessage.includes('Invalid email')) {
+                        displayError = '📧 Please enter a valid email address.';
+                    } else if (errorMessage.includes('Missing required')) {
+                        displayError = '⚠️ Please fill in all fields.';
+                    }
+                    
+                    errorDiv.textContent = displayError;
+                    errorDiv.classList.remove('hidden');
+                    return;
                 }
 
                 // Show success message
-                document.getElementById('waitlist-form').style.display = 'none';
-                document.getElementById('success-message').style.display = 'block';
+                document.getElementById('waitlist-form').classList.add('hidden');
+                document.getElementById('success-message').classList.remove('hidden');
                 
                 // Hide success message after 5 seconds
                 setTimeout(() => {
-                    document.getElementById('waitlist-form').style.display = 'block';
-                    document.getElementById('success-message').style.display = 'none';
+                    document.getElementById('waitlist-form').classList.remove('hidden');
+                    document.getElementById('success-message').classList.add('hidden');
                     document.getElementById('waitlist-form').reset();
+                    errorDiv.classList.add('hidden');
                 }, 5000);
 
             } catch (error) {
-                alert('Error joining waitlist. Please try again or refresh the page.');
+                errorDiv.textContent = '❌ Network error. Please check your connection and try again.';
+                errorDiv.classList.remove('hidden');
                 console.error('Error:', error);
             }
         });

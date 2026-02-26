@@ -479,6 +479,10 @@ h3 {
     margin-top: 40px;
 }
 
+.waitlist-form.hidden {
+    display: none;
+}
+
 .form-group {
     display: flex;
 }
@@ -535,6 +539,10 @@ h3 {
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
+.success-message.hidden {
+    display: none;
+}
+
 .success-message h3 {
     color: white;
     margin-bottom: 12px;
@@ -544,6 +552,23 @@ h3 {
 .success-message p {
     color: rgba(255, 255, 255, 0.9);
     font-size: 16px;
+}
+
+.error-message {
+    padding: 16px 20px;
+    background: rgba(255, 107, 107, 0.15);
+    border-left: 4px solid #FF6B6B;
+    border-radius: 8px;
+    color: #FF6B6B;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 16px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.error-message.hidden {
+    display: none;
 }
 
 /* Footer */
