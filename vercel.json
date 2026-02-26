@@ -1,5 +1,6 @@
 {
-  "public": "public",
+  "buildCommand": "",
+  "outputDirectory": "public",
   "rewrites": [
     {
       "source": "/api/(.*)",
