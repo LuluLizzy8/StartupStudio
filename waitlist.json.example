@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1708876234567",
+    "name": "Sarah Chen",
+    "email": "sarah.chen@university.edu",
+    "schoolYear": "junior",
+    "timestamp": "2026-02-25T10:30:34.567Z",
+    "position": 1
+  },
+  {
+    "id": "1708876345678",
+    "name": "Marcus Johnson",
+    "email": "marcus.j@college.edu",
+    "schoolYear": "sophomore",
+    "timestamp": "2026-02-25T10:31:45.678Z",
+    "position": 2
+  },
+  {
+    "id": "1708876456789",
+    "name": "Alex Rodriguez",
+    "email": "alex.r@grad.university.edu",
+    "schoolYear": "grad",
+    "timestamp": "2026-02-25T10:32:56.789Z",
+    "position": 3
+  }
+]

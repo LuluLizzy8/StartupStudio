@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoticeMe - Social Accountability for Screen Time</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="14" stroke="#4C6FFF" stroke-width="2"/>
+                        <circle cx="16" cy="16" r="8" fill="#4C6FFF" opacity="0.2"/>
+                        <circle cx="16" cy="16" r="4" fill="#4C6FFF"/>
+                    </svg>
+                    <span>NoticeMe</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#for-you">For You</a>
+                </div>
+                <button class="cta-button" onclick="scrollToWaitlist()">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Notice Your Scrolling.<br>Not Alone.</h1>
+                <p>NoticeMe helps you reduce mindless social media use through subtle social awareness—without blocking, restrictions, or punishment.</p>
+                <div class="hero-buttons">
+                    <button class="button button-primary" onclick="scrollToWaitlist()">Join the Waitlist</button>
+                    <button class="button button-secondary" onclick="document.getElementById('how-it-works').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="screen-item active">Your friends' activity</div>
+                            <div class="screen-item">Subtle signals</div>
+                            <div class="screen-item">Zero judgment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Problem We Solve</h2>
+                <p>You're not alone in this struggle</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <div class="problem-icon">📱</div>
+                    <h3>Momentum Loss</h3>
+                    <p>One scroll turns into hours. You know it's happening, but stopping feels impossible.</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">😰</div>
+                    <h3>Self-Control Fatigue</h3>
+                    <p>Blocking apps and setting limits feel restrictive and make you want to rebel.</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">🔓</div>
+                    <h3>Easy Workarounds</h3>
+                    <p>Screen time limits are trivial to bypass. You need a different approach entirely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How NoticeMe Works</h2>
+                <p>A fresh approach to behavior change</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Connect with Friends</h3>
+                    <p>Add trusted peers to your accountability circle. Choose who can see your activity.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Visible Signals</h3>
+                    <p>Subtle screen-time signals appear within your group—no shame, just awareness.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Social Awareness</h3>
+                    <p>Knowing friends can see your activity creates natural motivation to scroll less.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Regain Control</h3>
+                    <p>Spend your reclaimed time on what actually matters to you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why NoticeMe Works</h2>
+                <p>Designed for real behavior change</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #4C6FFF 0%, #6BCB77 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Social Accountability</h3>
+                    <p>Lightweight peer pressure that's actually helpful. Your friends' subtle awareness changes behavior naturally.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #6BCB77 0%, #FFB86B 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M19 11H5m14 0a2 2 0 0 1 0 4H5a2 2 0 0 1 0-4m14 0v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6"></path>
+                        </svg>
+                    </div>
+                    <h3>No Blocking. No Punishment.</h3>
+                    <p>We don't restrict your choices. You stay in control while gaining the support to make better decisions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #4C6FFF 0%, #FFB86B 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                    </div>
+                    <h3>Privacy You Control</h3>
+                    <p>Decide exactly what you share and with whom. Granular privacy controls keep you comfortable.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #FFB86B 0%, #4C6FFF 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                            <polyline points="13 2 13 9 20 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Motivating, Not Restrictive</h3>
+                    <p>The experience feels supportive and social, not like a punishment tool. That changes everything.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For You Section -->
+    <section class="for-you" id="for-you">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perfect for College Students</h2>
+                <p>Built specifically for your life</p>
+            </div>
+            <div class="for-you-grid">
+                <div class="for-you-card">
+                    <h3>Study More Effectively</h3>
+                    <p>Reclaim the hours you lose to scrolling. Focus on what matters during critical study periods.</p>
+                </div>
+                <div class="for-you-card">
+                    <h3>Strengthen Your Friendships</h3>
+                    <p>Share your journey with people who get it. Build genuine accountability with people you trust.</p>
+                </div>
+                <div class="for-you-card">
+                    <h3>Feel More Energized</h3>
+                    <p>Reduce the constant drain of endless scrolling. Get your time and focus back.</p>
+                </div>
+                <div class="for-you-card">
+                    <h3>Actually Keep Your Goals</h3>
+                    <p>Previous attempts failed because they felt punishing. NoticeMe creates lasting behavior change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="waitlist-section">
+        <div class="container">
+            <div class="waitlist-container">
+                <h2>Ready to Scroll Less?</h2>
+                <p>Join our waitlist and be among the first to regain control of your screen time.</p>
+                
+                <form id="waitlist-form" class="waitlist-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="school-year" name="schoolYear" required>
+                            <option value="">Select Your Year</option>
+                            <option value="high-school">High School</option>
+                            <option value="freshman">College Freshman</option>
+                            <option value="sophomore">Sophomore</option>
+                            <option value="junior">Junior</option>
+                            <option value="senior">Senior</option>
+                            <option value="grad">Graduate Student</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="button button-primary button-large">Join the Waitlist</button>
+                    <p class="form-note">📧 We'll notify you when NoticeMe launches. No spam, ever.</p>
+                </form>
+                
+                <div id="success-message" class="success-message" style="display: none;">
+                    <h3>✨ Welcome to the waitlist!</h3>
+                    <p>Check your email for updates. You're in great company.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>NoticeMe</h4>
+                    <p>Social accountability for screen time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NoticeMe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToWaitlist() {
+            document.getElementById('waitlist-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('waitlist-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const schoolYear = document.getElementById('school-year').value;
+            
+            try {
+                const response = await fetch('/api/waitlist', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        schoolYear,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to join waitlist');
+                }
+
+                // Show success message
+                document.getElementById('waitlist-form').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('waitlist-form').style.display = 'block';
+                    document.getElementById('success-message').style.display = 'none';
+                    document.getElementById('waitlist-form').reset();
+                }, 5000);
+
+            } catch (error) {
+                alert('Error joining waitlist. Please try again or refresh the page.');
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
