@@ -6,8 +6,5 @@
       "source": "/api/(.*)",
       "destination": "/api/$1.js"
     }
-  ],
-  "env": [
-    "NODE_ENV"
   ]
 }
