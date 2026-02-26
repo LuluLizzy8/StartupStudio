@@ -7,7 +7,11 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const waitlistFile = path.join(__dirname, '../waitlist.json');
+// Use /tmp for Vercel (read-only filesystem outside /tmp)
+// Local development falls back to project root
+const waitlistFile = process.env.VERCEL 
+  ? '/tmp/waitlist.json' 
+  : path.join(__dirname, '../waitlist.json');
 
 function readWaitlist() {
     try {
