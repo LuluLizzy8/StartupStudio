@@ -15,12 +15,19 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('.'));
 
-// Path to waitlist file
-const waitlistFile = path.join(__dirname, 'waitlist.json');
+// Path to waitlist file - use /tmp on Vercel (read-only filesystem)
+const waitlistFile = process.env.VERCEL 
+  ? '/tmp/waitlist.json' 
+  : path.join(__dirname, 'waitlist.json');
 
 // Initialize waitlist file if it doesn't exist
-if (!fs.existsSync(waitlistFile)) {
-    fs.writeFileSync(waitlistFile, JSON.stringify([], null, 2));
+try {
+    if (!fs.existsSync(waitlistFile)) {
+        fs.writeFileSync(waitlistFile, JSON.stringify([], null, 2));
+    }
+} catch (error) {
+    // On Vercel, /tmp might not be writable at startup - that's ok
+    console.warn('Could not initialize waitlist file:', error.message);
 }
 
 // Helper function to read waitlist
@@ -35,7 +42,12 @@ function readWaitlist() {
 
 // Helper function to write waitlist
 function writeWaitlist(data) {
-    fs.writeFileSync(waitlistFile, JSON.stringify(data, null, 2));
+    try {
+        fs.writeFileSync(waitlistFile, JSON.stringify(data, null, 2));
+    } catch (error) {
+        console.error('Error writing waitlist:', error.message);
+        throw error;
+    }
 }
 
 // GET /api/waitlist - Get all waitlist entries (admin only - add auth later)
