@@ -2,26 +2,8 @@
   "name": "noticeme-landing",
   "version": "1.0.0",
   "description": "NoticeMe - Social Accountability for Screen Time",
-  "main": "server.js",
   "type": "module",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "vercel-build": "npm install"
-  },
-  "keywords": [
-    "social-accountability",
-    "screen-time",
-    "students"
-  ],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5"
-  },
   "engines": {
     "node": "24.x"
-  },
-  "devDependencies": {}
+  }
 }
